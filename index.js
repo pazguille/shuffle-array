@@ -3,6 +3,10 @@ module = module.exports = function (arr) {
         random,
         temp;
 
+    if (!Array.isArray(arr)) {
+        throw new Error('shuffle-array expect an array as parameter.');
+    }
+
     while (len) {
         random = Math.floor(Math.random() * len);
         len -= 1;
