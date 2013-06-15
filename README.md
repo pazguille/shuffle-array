@@ -1,6 +1,8 @@
 # shuffle-array
 
-Randomize the order of the elements in a given array.
+Randomize the order of the elements in a given array using the [Fisher-Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
+
+[Read More.](http://sroucheray.org/blog/2009/11/array-sort-should-not-be-used-to-shuffle-an-array/)
 
 ## Installation
 
@@ -15,12 +17,24 @@ Also, you can use the standalone version:
 ```
 
 ## How-to
+```js
+var shuffle = require('suffle-array'),
+    collection = [1,2,3,4,5];
 
-WIP
+shuffle(collection);
+
+console.log(collection); // returns [4, 3, 1, 5, 2]
+```
 
 ## API
 
-WIP
+### suffle(arr)
+Randomizes the order of the elements in a given `array`.
+- `arr` - The given array.
+
+```js
+shuffle([1,2,3,4,5]); // returns [4, 3, 1, 5, 2]
+```
 
 ## Contact
 - Guillermo Paz (Frontend developer - JavaScript developer | Web standards lover)
