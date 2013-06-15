@@ -1,3 +1,8 @@
+/**
+ * Randomize the order of the elements in a given array.
+ * @param {arr} arr - The given array.
+ * @returns {array}
+ */
 module = module.exports = function (arr) {
     var len = arr.length,
         random,
