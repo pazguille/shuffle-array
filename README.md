@@ -2,8 +2,6 @@
 
 Randomize the order of the elements in a given array using the [Fisher-Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
-[Read More.](http://sroucheray.org/blog/2009/11/array-sort-should-not-be-used-to-shuffle-an-array/)
-
 ## Installation
 
     $ component install pazguille/shuffle-array
