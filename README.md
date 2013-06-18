@@ -16,7 +16,7 @@ Also, you can use the standalone version:
 
 ## How-to
 ```js
-var shuffle = require('suffle-array'),
+var shuffle = require('shuffle-array'),
     collection = [1,2,3,4,5];
 
 shuffle(collection);
@@ -26,7 +26,7 @@ console.log(collection); // returns [4, 3, 1, 5, 2]
 
 ## API
 
-### suffle(arr)
+### shuffle(arr)
 Randomizes the order of the elements in a given `array`.
 - `arr` - The given array.
 
