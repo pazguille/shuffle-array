@@ -58,4 +58,12 @@ describe('shuffle-array', function () {
         }
 
     });
+
+    it('should return a shuffled copy of the given array', function () {
+        var i = 0,
+            len = collection.length,
+            newCollection = shuffle(collection, true);
+
+        expect(newCollection).not.toEqual(collection);
+    });
 });
