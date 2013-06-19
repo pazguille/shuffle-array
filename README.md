@@ -47,7 +47,7 @@ Pick one or more `random` elements from the given `array`.
 shuffle.pick([1,2,3,4,5]); // returns 5
 
 // Return a random collection with 2 elements
-shuffle([1,2,3,4,5], 2); // returns [4, 3]
+shuffle.pick([1,2,3,4,5], 2); // returns [4, 3]
 ```
 
 ## Contact
