@@ -26,12 +26,16 @@ console.log(collection); // returns [4, 3, 1, 5, 2]
 
 ## API
 
-### shuffle(arr)
+### shuffle(arr, copy)
 Randomizes the order of the elements in a given `array`.
 - `arr` - The given array.
+- `copy` [optional] - Sets if should return a shuffled copy of the given array. By default it's a falsy value.
 
 ```js
 shuffle([1,2,3,4,5]); // returns [4, 3, 1, 5, 2]
+
+// Return a copy of the given array
+shuffle([1,2,3,4,5], true); // return [4, 3, 1, 5, 2] (copied)
 ```
 
 ## Contact
