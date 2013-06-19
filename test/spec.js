@@ -67,3 +67,32 @@ describe('shuffle-array', function () {
         expect(newCollection).not.toEqual(collection);
     });
 });
+
+describe('shuffle-array.pick()', function () {
+
+    it('should be defined', function () {
+        expect(shuffle.pick).toBeDefined();
+    });
+
+    it('should be a function', function () {
+        expect(typeof shuffle.pick).toEqual('function');
+    });
+
+    it('should receive an array as parameter', function () {
+        expect(function(){
+            shuffle.pick();
+        }).toThrow();
+    });
+
+    it('should return a random element from the given array', function () {
+        var randomElement = shuffle.pick(collection);
+        expect(collection.indexOf(randomElement)).not.toEqual(-1);
+    });
+
+    it('should return a collection of random element from the given array', function () {
+        var newCollection = shuffle.pick(collection, 2);
+
+        expect(Array.isArray(newCollection)).toBeTruthy();
+        expect(collection.indexOf(newCollection[0])).not.toEqual(-1);
+    });
+});
