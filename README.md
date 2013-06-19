@@ -35,7 +35,19 @@ Randomizes the order of the elements in a given `array`.
 shuffle([1,2,3,4,5]); // returns [4, 3, 1, 5, 2]
 
 // Return a copy of the given array
-shuffle([1,2,3,4,5], true); // return [4, 3, 1, 5, 2] (copied)
+shuffle([1,2,3,4,5], true); // returns [4, 3, 1, 5, 2] (copied)
+```
+
+### shuffle.pick(arr, [picks])
+Pick one or more `random` elements from the given `array`.
+- `arr` - The given array.
+- `picks` [optional] - Specifies how many random elements you want to pick. By default it picks 1.
+
+```js
+shuffle.pick([1,2,3,4,5]); // returns 5
+
+// Return a random collection with 2 elements
+shuffle([1,2,3,4,5], 2); // returns [4, 3]
 ```
 
 ## Contact
