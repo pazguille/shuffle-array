@@ -1,3 +1,10 @@
+/*!
+ * shuffle-array - v0.0.2
+ *
+ * Copyright (c) 2014, Guille Paz <guille87paz@gmail.com>
+ * Released under the MIT license.
+ */
+(function(window) {
 'use strict';
 
 /**
@@ -67,4 +74,18 @@ shuffle.pick = function(arr, picks) {
 /**
  * Expose
  */
-module.exports = shuffle;
+// AMD
+if (typeof window.define === 'function' && window.define.amd !== undefined) {
+  window.define('shuffle-array', [], function () {
+    return shuffle;
+  });
+// CommonJS
+} else if (typeof module !== 'undefined' && module.exports !== undefined) {
+  module.exports = shuffle;
+// Browser
+} else {
+  window.shuffle = shuffle;
+};
+
+
+}(this));
