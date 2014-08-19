@@ -1,4 +1,4 @@
-if (window.require) {
+if (this.require) {
   var shuffle = require('../'),
       assert = require('better-assert');
 }
