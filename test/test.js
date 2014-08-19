@@ -1,4 +1,4 @@
-if (this.require) {
+if (require !== undefined) {
   var shuffle = require('../'),
       assert = require('better-assert');
 }
