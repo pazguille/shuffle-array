@@ -1,4 +1,4 @@
-if (require !== undefined) {
+if (typeof window === 'undefined') {
   var shuffle = require('../'),
       assert = require('better-assert');
 }
