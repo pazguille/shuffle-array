@@ -85,5 +85,4 @@ gulp.task('test', function() {
 /**
  * Register tasks
  */
-gulp.task('default', ['build']);
-gulp.task('dist', ['build', 'min']);
+gulp.task('default', ['build', 'min']);

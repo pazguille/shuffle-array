@@ -5,7 +5,7 @@
   "author": "Guille Paz <guille87paz@gmail.com>",
   "version": "0.1.0",
   "scripts": {
-    "start": "gulp",
+    "dist": "gulp",
     "test": "gulp test"
   },
   "devDependencies": {
