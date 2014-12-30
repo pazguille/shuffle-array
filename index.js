@@ -6,7 +6,7 @@
  * @param {boolean} [copy] - Sets if should return a shuffled copy of the given array. By default it's a falsy value.
  * @returns {array}
  */
-function shuffle(arr, copy) {
+function shuffle(arr, copy, rng) {
 
   if (!Array.isArray(arr)) {
     throw new Error('shuffle expect an array as parameter.');
@@ -14,6 +14,7 @@ function shuffle(arr, copy) {
 
   var collection = arr,
       len = arr.length,
+      rng = rng || Math.random,
       random,
       temp;
 
@@ -22,7 +23,7 @@ function shuffle(arr, copy) {
   }
 
   while (len) {
-    random = Math.floor(Math.random() * len);
+    random = Math.floor(rng() * len);
     len -= 1;
     temp = collection[len];
     collection[len] = collection[random];
@@ -38,11 +39,13 @@ function shuffle(arr, copy) {
  * @param {number} picks [optional] - Specifies how many random elements you want to pick. By default it picks 1.
  * @returns {Object}
  */
-shuffle.pick = function(arr, picks) {
+shuffle.pick = function(arr, picks, rng) {
 
   if (!Array.isArray(arr)) {
     throw new Error('shuffle.pick() expect an array as parameter.');
   }
+  
+  rng || (rng = Math.random);
 
   if (typeof picks === 'number' && picks !== 1) {
     var len = arr.length,
@@ -51,7 +54,7 @@ shuffle.pick = function(arr, picks) {
         index;
 
     while (picks) {
-      index = Math.floor(Math.random() * len);
+      index = Math.floor(rng() * len);
       random.push(collection[index]);
       collection.splice(index, 1);
       len -= 1;
@@ -61,7 +64,7 @@ shuffle.pick = function(arr, picks) {
     return random;
   }
 
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(rng() * arr.length)];
 };
 
 /**
