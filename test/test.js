@@ -53,7 +53,7 @@ describe('shuffle-array', function () {
     it('should return a shuffled copy of the given array', function () {
       var i = 0,
           len = collection.length,
-          newCollection = shuffle(collection, true);
+          newCollection = shuffle(collection, {'copy': true});
 
       assert(newCollection !== collection);
     });
@@ -81,7 +81,7 @@ describe('shuffle-array.pick()', function () {
     });
 
     it('should return a collection of random element from the given array', function () {
-      var newCollection = shuffle.pick(collection, 2);
+      var newCollection = shuffle.pick(collection, {'picks': 2});
 
       assert(Array.isArray(newCollection));
       assert(collection.indexOf(newCollection[0]) !== -1);
