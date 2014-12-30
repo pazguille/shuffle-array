@@ -3,7 +3,7 @@
   "repository": "git@github.com:pazguille/shuffle-array.git",
   "description": "Randomize the order of the elements in a given array.",
   "author": "Guille Paz <guille87paz@gmail.com>",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "scripts": {
     "start": "gulp",
     "test": "gulp test"
