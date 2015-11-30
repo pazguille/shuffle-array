@@ -86,4 +86,10 @@ describe('shuffle-array.pick()', function () {
       assert(Array.isArray(newCollection));
       assert(collection.indexOf(newCollection[0]) !== -1);
     });
+    
+    it('should not return more items than what is in the array', function() {
+      var newCollection = shuffle.pick(collection, {'picks': collection.length + 5});
+      
+      assert(newCollection.length == collection.length);
+    });
 });

@@ -62,7 +62,7 @@ shuffle.pick = function(arr, options) {
         random = [],
         index;
 
-    while (picks) {
+    while (picks && len) {
       index = Math.floor(rng() * len);
       random.push(collection[index]);
       collection.splice(index, 1);
