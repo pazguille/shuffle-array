@@ -1,7 +1,7 @@
 /*!
- * shuffle-array - v0.1.0
+ * shuffle-array - v0.1.1
  *
- * Copyright (c) 2014, Guille Paz <guille87paz@gmail.com>
+ * Copyright (c) 2015, Guille Paz <guille87paz@gmail.com>
  * Released under the MIT license.
  */
 (function(window) {
@@ -69,7 +69,7 @@ shuffle.pick = function(arr, options) {
         random = [],
         index;
 
-    while (picks) {
+    while (picks && len) {
       index = Math.floor(rng() * len);
       random.push(collection[index]);
       collection.splice(index, 1);
