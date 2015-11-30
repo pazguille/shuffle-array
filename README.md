@@ -58,7 +58,7 @@ shuffle.pick([1,2,3,4,5], { 'picks': 2 })); // returns [4, 3]
 
     npm test
 
-## Made with ❤ by
+## Made with :heart: by
 - Guille Paz (Front-end developer | Web standards lover)
 - E-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
 - Twitter: [@pazguille](http://twitter.com/pazguille)
