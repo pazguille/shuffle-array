@@ -1,4 +1,6 @@
-# shuffle-array [![Build Status](https://secure.travis-ci.org/pazguille/shuffle-array.png)](http://travis-ci.org/pazguille/shuffle-array) [![devDependency Status](https://david-dm.org/pazguille/shuffle-array/dev-status.png)](https://david-dm.org/pazguille/shuffle-array#info=devDependencies)
+# shuffle-array
+
+[![NPM version][npm-image]][npm-link] [![License][lic-image]][npm-link] [![Build status][travis-image]][travis-link] [![Coverage Status][coverage-image]][coverage-link] [![devDependency status][devdeps-image]][devdeps-link] [![downloads][dt-image]][npm-link]
 
 > Randomize the order of the elements in a given array using the [Fisher-Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
 
@@ -58,7 +60,7 @@ shuffle.pick([1,2,3,4,5], { 'picks': 2 })); // returns [4, 3]
 
     npm test
 
-## Made with :heart: by
+## With :heart: by
 - Guille Paz (Front-end developer | Web standards lover)
 - E-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
 - Twitter: [@pazguille](http://twitter.com/pazguille)
@@ -66,3 +68,14 @@ shuffle.pick([1,2,3,4,5], { 'picks': 2 })); // returns [4, 3]
 
 ## License
 MIT license. Copyright © 2014.
+
+[npm-image]: https://img.shields.io/npm/v/shuffle-array.svg
+[lic-image]: https://img.shields.io/npm/l/shuffle-array.svg
+[npm-link]: https://npmjs.org/package/shuffle-array
+[travis-image]: https://img.shields.io/travis/pazguille/shuffle-array.svg
+[travis-link]: https://travis-ci.org/pazguille/shuffle-array
+[devdeps-image]: https://img.shields.io/david/dev/pazguille/shuffle-array.svg
+[devdeps-link]: https://david-dm.org/pazguille/shuffle-array#info=devDependencies
+[dt-image]: https://img.shields.io/npm/dt/shuffle-array.svg
+[coverage-image]: https://img.shields.io/coveralls/pazguille/shuffle-array.svg
+[coverage-link]: https://coveralls.io/github/pazguille/shuffle-array
