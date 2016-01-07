@@ -3,7 +3,8 @@
   "repository": "git@github.com:pazguille/shuffle-array.git",
   "description": "Randomize the order of the elements in a given array.",
   "author": "Guille Paz <guille87paz@gmail.com>",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "contributors": ["David Rissato Cruz <davidrc@gmail.com>"],
   "scripts": {
     "dist": "gulp",
     "test": "gulp && istanbul cover -x Gulpfile.js gulp test"
