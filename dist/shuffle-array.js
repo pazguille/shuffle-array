@@ -1,7 +1,7 @@
 /*!
- * shuffle-array - v0.1.2
+ * shuffle-array - v0.1.3
  *
- * Copyright (c) 2015, Guille Paz <guille87paz@gmail.com>
+ * Copyright (c) 2016, Guille Paz <guille87paz@gmail.com>
  * Released under the MIT license.
  */
 (function(window) {
@@ -42,15 +42,15 @@ function shuffle(arr, options) {
   }
 
   return collection;
-};
+}
 
 /**
  * Pick one or more random elements from the given array.
  * @param {Array} arr - The given array.
  * @param {Object} [options] - Optional configuration options.
- * @param {Number} [options.picks] - Specifies how many random elements you want to pick. By default it picks 1.
+ * @param {Number} [options.picks] - Specifies how many random elements you want to pick. It returns an array of picks.
  * @param {Function} [options.rng] - Specifies a custom random number generator.
- * @returns {Object}
+ * @returns {Array | Object} If you specify options.picks, it returns an array. Otherwise returns an object.
  */
 shuffle.pick = function(arr, options) {
 
@@ -61,9 +61,10 @@ shuffle.pick = function(arr, options) {
   options = options || {};
 
   var rng = options.rng || Math.random,
-      picks = options.picks || 1;
+      picks = options.picks;
 
-  if (typeof picks === 'number' && picks !== 1) {
+  // When we specify picks, it means that we want an array, even when we ask for only one
+  if (picks && typeof picks === 'number') {
     var len = arr.length,
         collection = arr.slice(),
         random = [],
@@ -80,6 +81,7 @@ shuffle.pick = function(arr, options) {
     return random;
   }
 
+  // If we don't specify picks, it means we want an object
   return arr[Math.floor(rng() * arr.length)];
 };
 
