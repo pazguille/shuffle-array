@@ -1,7 +1,7 @@
 {
   "name": "shuffle-array",
    "main": "dist/shuffle-array.js",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/pazguille/shuffle-array",
   "description": "Randomize the order of the elements in a given array.",
   "keywords": [
