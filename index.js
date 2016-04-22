@@ -79,6 +79,45 @@ shuffle.pick = function(arr, options) {
 };
 
 /**
+ * Pick and remove one or more random elements from the given array. Note: this method changes the original array.
+ * @param {Array} arr - The given array.
+ * @param {Object} [options] - Optional configuration options.
+ * @param {Number} [options.picks] - Specifies how many random elements you want to pick. It returns an array of picks.
+ * @param {Function} [options.rng] - Specifies a custom random number generator.
+ * @returns {Array | Object} If you specify options.picks, it returns an array. Otherwise returns an object.
+ */
+shuffle.pickSplice = function(arr, options) {
+
+  if (!Array.isArray(arr)) {
+    throw new Error('shuffle.pick() expect an array as parameter.');
+  }
+
+  options = options || {};
+
+  var rng = options.rng || Math.random,
+      picks = options.picks;
+
+  // When we specify picks, it means that we want an array, even when we ask for only one
+  if (picks && typeof picks === 'number') {
+    var len = arr.length,
+        random = [],
+        index;
+
+    while (picks && len) {
+      index = Math.floor(rng() * len);
+      random.push(arr.splice(index, 1)[0]);
+      len -= 1;
+      picks -= 1;
+    }
+
+    return random;
+  }
+
+  // If we don't specify picks, it means we want an object
+  return arr.splice(Math.floor(rng() * arr.length),1)[0];
+};
+
+/**
  * Expose
  */
 module.exports = shuffle;
