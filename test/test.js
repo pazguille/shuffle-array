@@ -92,4 +92,15 @@ describe('shuffle-array.pick()', function () {
 
       assert(newCollection.length == collection.length);
     });
+
+    it('should return a array for picks: 1', function() {
+      var newCollection = shuffle.pick(collection, {'picks': 1});
+      assert(Array.isArray(newCollection));
+      assert(newCollection.length == 1);
+    });
+    it('should return a array for picks: 0', function() {
+      var newCollection = shuffle.pick(collection, {'picks': 0});
+      assert(Array.isArray(newCollection));
+      assert(newCollection.length == 0);
+    });
 });

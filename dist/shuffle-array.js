@@ -1,5 +1,5 @@
 /*!
- * shuffle-array - v0.1.3
+ * shuffle-array - v2.0.0
  *
  * Copyright (c) 2016, Guille Paz <guille87paz@gmail.com>
  * Released under the MIT license.
@@ -64,7 +64,7 @@ shuffle.pick = function(arr, options) {
       picks = options.picks;
 
   // When we specify picks, it means that we want an array, even when we ask for only one
-  if (picks && typeof picks === 'number') {
+  if (picks !== undefined && typeof picks === 'number') {
     var len = arr.length,
         collection = arr.slice(),
         random = [],
