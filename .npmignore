@@ -1,5 +1,6 @@
 test/
 dist/
+coverage/
 .travis.yml
 component.json
 bower.json
