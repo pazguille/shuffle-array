@@ -1,5 +1,5 @@
 /*!
- * shuffle-array - v1.0.0
+ * shuffle-array - v1.0.1
  *
  * Copyright (c) 2017, Guille Paz <guille87paz@gmail.com>
  * Released under the MIT license.
