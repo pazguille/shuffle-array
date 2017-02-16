@@ -5,7 +5,8 @@
   "author": "Guille Paz <guille87paz@gmail.com>",
   "version": "1.0.0",
   "scripts": {
-    "dist": "gulp",
+    "build": "gulp",
+    "dist": "gulp && gulp min",
     "test": "gulp && istanbul cover -x Gulpfile.js gulp test"
   },
   "devDependencies": {
