@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "better-assert": "1.0.2",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-footer": "1.0.5",
     "gulp-header": "1.8.8",
     "gulp-mocha": "3.0.1",
