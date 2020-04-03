@@ -18,7 +18,7 @@
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.5.4",
     "gulp-uglify": "2.0.1",
-    "mkdirp": "0.5.1",
+    "mkdirp": "1.0.4",
     "coveralls": "2.11.16",
     "istanbul": "0.4.5"
   },
