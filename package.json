@@ -19,7 +19,7 @@
     "gulp-replace": "0.5.4",
     "gulp-uglify": "2.0.1",
     "mkdirp": "0.5.1",
-    "coveralls": "2.11.16",
+    "coveralls": "3.0.14",
     "istanbul": "0.4.5"
   },
   "main": "index.js",
